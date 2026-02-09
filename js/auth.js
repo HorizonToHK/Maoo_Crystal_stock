@@ -24,7 +24,7 @@
 
     /* ---- if already authed, redirect immediately ---- */
     if (sessionStorage.getItem('maoo_auth') === 'active') {
-        window.location.replace('system/2026feb09_maoo_sys.html');
+        window.location.replace('system/Maoo%20sys.html');
         return;
     }
 
@@ -58,7 +58,7 @@
                 if (u === _u && p === _p) {
                     sessionStorage.setItem('maoo_auth', 'active');
                     sessionStorage.setItem('maoo_ts', Date.now().toString());
-                    window.location.href = 'system/2026feb09_maoo_sys.html';
+                    window.location.href = 'system/Maoo%20sys.html';
                 } else {
                     setLoading(false);
                     showError('帳號或密碼錯誤 Invalid username or password');
@@ -83,4 +83,5 @@
             ? '<span class="spinner"></span>'
             : '登入 Login';
     }
+
 })();
