@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Staff Login ✦ MAOO Crystal</title>
+    <link rel="icon" type="image/jpeg" href="assets/Maoo_Logo.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Blurred Background -->
+    <div class="bg-container" aria-hidden="true">
+        <div class="bg-image"></div>
+        <div class="bg-overlay"></div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="page-wrapper">
+        <div class="card animate-fade-in">
+
+            <!-- Logo -->
+            <div class="logo-container">
+                <img src="assets/Maoo_Logo.jpg" alt="MAOO Crystal Logo" class="logo logo-sm">
+            </div>
+
+            <!-- Title -->
+            <h1 class="login-title">Staff Login</h1>
+            <p class="login-subtitle">員工管理系統登入</p>
+
+            <!-- Divider -->
+            <div class="divider"><span class="divider-icon">✦</span></div>
+
+            <!-- Login Form -->
+            <form id="loginForm" autocomplete="on" novalidate>
+
+                <!-- Username -->
+                <div class="form-group">
+                    <label for="username" class="form-label">帳號 Account</label>
+                    <input
+                        type="text"
+                        id="username"
+                        class="form-input"
+                        placeholder="Username"
+                        autocomplete="username"
+                        spellcheck="false"
+                        required>
+                </div>
+
+                <!-- Password -->
+                <div class="form-group">
+                    <label for="password" class="form-label">密碼 Password</label>
+                    <div class="input-with-toggle">
+                        <input
+                            type="password"
+                            id="password"
+                            class="form-input"
+                            placeholder="Password"
+                            autocomplete="current-password"
+                            required>
+                        <button type="button"
+                                class="toggle-password"
+                                id="togglePassword"
+                                aria-label="Toggle password visibility"
+                                title="Show / Hide">
+                            <svg class="eye-icon" id="eyeIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                <circle cx="12" cy="12" r="3"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Submit -->
+                <button type="submit" class="btn-submit" id="loginBtn">
+                    <span id="btnLabel">登入 Login</span>
+                </button>
+
+                <!-- Error Message -->
+                <div class="error-box" id="errorBox" role="alert" aria-live="polite">
+                    <span id="errorText"></span>
+                </div>
+            </form>
+
+            <!-- Back to Home -->
+            <a href="index.html" class="back-link">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="19" y1="12" x2="5" y2="12"/>
+                    <polyline points="12 19 5 12 12 5"/>
+                </svg>
+                返回主頁 Back to Home
+            </a>
+
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer animate-fade-in-delayed">
+            <p>© 2025–2026 MAOO Crystal. All rights reserved.</p>
+        </footer>
+    </main>
+
+    <script src="js/auth.js"></script>
+</body>
+</html>
